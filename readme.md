@@ -21,7 +21,7 @@ Prefixr-CLI saves the prefixed CSS in a seperate file.
 ## Installation
 
 1. Open your prefered terminal.
-- Execute `$ curl -s https://raw.github.com/js-coder/prefixr-cli/master/install.sh | sh`
+- Execute `$ curl -s https://raw.github.com/js-coder/prefixr-cl/master/install.sh | sh`
 
 *Note that you need to run the installation script as root, that means that you might have to tweak the above code 
 a little bit. For example on Debian (➞ Ubuntu):* `$ curl -s https://raw.github.com/js-coder/prefixr-cli/master/install.sh | sudo sh`
