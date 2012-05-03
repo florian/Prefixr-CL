@@ -5,7 +5,7 @@
 > always copying and pasting the CSS between editor and browser doesn't quite fit into my workflow. 
 > Prefixr-CLI provides an easy way to query the Prefixr API on the command line.
 
-## What's the advantage of using this instead of the editor extension?
+## Why not use one of the editor plugins?
 
 I like to keep my CSS files as small as possible and only include the prefixed properties in the production (minified)
 version. The editor extensions add the prefixed CSS to the current file which makes it a lot bigger and harder to maintain.
