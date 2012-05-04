@@ -24,7 +24,7 @@ Prefixr-CLI saves the prefixed CSS in a seperate file.
 - Execute `$ curl -s https://raw.github.com/js-coder/prefixr-cl/master/install.sh | sh`
 
 *Note that you need to run the installation script as root, that means that you might have to tweak the above code 
-a little bit. For example on Debian (➞ Ubuntu):* `$ curl -s https://raw.github.com/js-coder/prefixr-cli/master/install.sh | sudo sh`
+a little bit. For example on Debian (➞ Ubuntu):* `$ curl -s https://raw.github.com/js-coder/prefixr-cl/master/install.sh | sudo sh`
 
 ## Usage
 
@@ -60,5 +60,6 @@ $ prefixr -v
 ## Ideas for further improvements
 
 -  A watch mode: `--watch`. If enabled, everytime one of the CSS files is saved, Prefixr-CLI saves the prefixed CSS. Unfortunately this conflicts with the `>` bash operator, so I'll have to figure out an alternative syntax.
+-  Throw an error and exit the script if one of the input file doesn't exist.
 
 If you have any other ideas please let me know. You can either fork this repo and submit a pull request or open an [issue](https://github.com/js-coder/Prefixr-CLI/issues).
