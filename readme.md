@@ -1,9 +1,9 @@
 # Prefixr on the command line
 
-> [prefixr.com](http://prefixr.com) is an awesome tool that adds vendor prefixes to your CSS. 
-> While it certainly does a great job, 
-> always copying and pasting the CSS between editor and browser doesn't quite fit into my workflow. 
-> Prefixr-CLI provides an easy way to query the Prefixr API on the command line.
+[prefixr.com](http://prefixr.com) is an awesome tool that adds vendor prefixes to your CSS. 
+While it certainly does a great job, 
+always copying and pasting the CSS between editor and browser doesn't quite fit into my workflow. 
+Prefixr-CLI provides an easy way to query the Prefixr API on the command line.
 
 ## Why not use one of the editor plugins?
 
