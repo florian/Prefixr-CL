@@ -8,7 +8,7 @@ Prefixr-CLI provides an easy way to query the Prefixr API on the command line.
 ## Why not use one of the editor plugins?
 
 I like to keep my CSS files as small as possible and only include the prefixed properties in the production (minified)
-version. The editor extensions add the prefixed CSS to the current file which makes it a lot bigger and harder to maintain.
+version. The editor plugins add the prefixed CSS to the current file which makes it a lot bigger and harder to maintain.
 Prefixr-CLI saves the prefixed CSS in a seperate file.
 
 ## Requirements
@@ -57,9 +57,19 @@ $ prefixr --version
 $ prefixr -v
 ```
 
+## Uninstall Prefixr-CL
+
+I have no idea why someone would like to uninstall Prefixr-CL but it's as simple as removing a file:
+
+```bash
+$ rm /usr/bin/prefixr
+```
+
+You will need root permissions to remove that file, so on Debian e.g. it's `$ sudo rm /usr/bin/prefixr`.
+
 ## Ideas for further improvements
 
 -  A watch mode: `--watch`. If enabled, everytime one of the CSS files is saved, Prefixr-CLI saves the prefixed CSS. Unfortunately this conflicts with the `>` bash operator, so I'll have to figure out an alternative syntax.
--  Throw an error and exit the script if one of the input file doesn't exist.
+-  Make the help mode look prettier.
 
 If you have any other ideas please let me know. You can either fork this repo and submit a pull request or open an [issue](https://github.com/js-coder/Prefixr-CLI/issues).
