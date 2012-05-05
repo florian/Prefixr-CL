@@ -57,7 +57,7 @@ $ prefixr --version
 $ prefixr -v
 ```
 
-## Uninstall Prefixr-CL
+## Uninstalling Prefixr-CL
 
 I have no idea why someone would like to uninstall Prefixr-CL but it's as simple as removing a file:
 
