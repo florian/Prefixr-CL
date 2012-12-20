@@ -11,6 +11,7 @@
   "bin": {
     "prefixr": "bin/prefixr"
   },
+  "preferGlobal": true,
   "dependencies": {
     "jquery": "*",
     "argsparser": "*",
