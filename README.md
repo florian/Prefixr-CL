@@ -124,3 +124,4 @@ prefix.files(['examples/styles', 'examples/more_styles.css'], options, callback)
 - Refactoring – A lot.
 - Fix watch mode in combination with `--output-self`.
 - Print time + file name when an input file changes in watch mode.
+- Better error messages when files cannot be found.
