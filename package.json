@@ -1,7 +1,7 @@
 {
   "name": "prefixr",
   "description": "Query prefixr.com in node and on the command line.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Florian H. <jscoderr@gmail.com>",
   "main": "lib/index.js",
