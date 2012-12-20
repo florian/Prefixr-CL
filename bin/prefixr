@@ -1,0 +1,90 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+var $ = require('jquery');
+var watch = require('node-watch');
+var args = require('argsparser').parse();
+var __prefix = require('prefixr');
+var utils = require('../lib/utils.js');
+
+// `|| false` is not needed, but it's nice for debugging the code.
+// process.argv.length is 2 when no additonal arguments are passed.
+var showHelp = args['--help'] || args['-h'] || args['-?'] || process.argv.length == 2 || false;
+var showVersion = args['--version'] || args['-v'] || false;
+
+if (showHelp) {
+	console.log(fs.readFileSync(path.resolve(__dirname, 'help.txt'), 'UTF-8'));
+	process.exit();
+}
+
+if (showVersion) {
+	console.log('Prefixr-CL v' + prefix.VERSION + '.');
+	process.exit();
+}
+
+var input = $.makeArray(args['--input']).concat(args['-i'] || []);
+
+var output = $.makeArray(args['--output'] || args['-o']);
+var outputSelf = args['--output-self'] || args['-s'] || false;
+var printOutput = args['--print'] || args['-p'] || false;
+
+var options = {
+	compress: args['--compress'] || args['-c'] || false,
+	variables: args['--no-variables'] || args['-nv'] || true,
+	exclude: args['--exclude'] || args['-e']
+};
+
+var watchMode = args['--watch'] || args['-w'] || false;
+
+function prefix () {
+	if (outputSelf) {
+		input.forEach(function (file) {
+			file = utils.completeFileName(file);
+			fs.readFile(file, 'UTF-8', function (e, css) {
+				if (e) {
+					console.log(e);
+				}
+
+				__prefix(css, options, function (prefixed) {
+					fs.writeFile(file, prefixed, function (e) {
+						if (e) {
+							console.log(e);
+						}
+					});
+				});
+			});
+		});
+	} else {
+		__prefix.files(input, options, function (prefixed) {
+			if (output.length) {
+				output.forEach(function (file) {
+					file = utils.completeFileName(file);
+					fs.writeFile(file, prefixed, function (e) {
+						if (e) {
+							console.log(e);
+						}
+					});
+				});
+			} else {
+				console.log(prefixed);
+			}
+		});
+	}
+}
+
+if (watchMode) {
+	input.forEach(function (file) {
+		file = /\.css$/.test(file) ? file : file + '.css';
+		watch(file, function (file) {
+			prefix();
+		});
+	});
+} else {
+	prefix();
+}
+
+/*
+watch mode
+refactoring
+*/

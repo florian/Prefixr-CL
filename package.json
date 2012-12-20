@@ -1,0 +1,23 @@
+{
+  "name": "prefixr",
+  "description": "Query prefixr.com in node and on the command line.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Florian H. <jscoderr@gmail.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "prefixr": "bin/prefixr"
+  },
+  "dependencies": {
+    "jquery": "*",
+    "argsparser": "*",
+    "node-watch": "*"
+  },
+  "keywords": [
+    "css",
+    "prefixr"
+  ]
+}

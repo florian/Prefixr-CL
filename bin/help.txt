@@ -1,0 +1,27 @@
+
+    Usage: prefixr --input <files> [output options] [other options]
+
+    Examples:
+
+      --input base.css app.css --output styles.css
+       -i base app -o styles # Drop .css, use shortcut options.
+       -i base -o styles -e ms o # Don't add prefixes for IE and Opera
+
+    Meta:
+
+      -h, --help              print usage information
+      -v, --version           print the version number
+
+    Input and output options:
+
+      -i, --input <files>     the CSS files you want to prefix
+      -o, --output <files>    write the prefixed CSS into <files>
+      -s, --output-self       write the prefixed CSS into the input files
+      -p, --print             print the prefixed CSS
+
+    Other options:
+
+      -c, --compress          compress the prefixed CSS
+      -nv, --no-variables     keep variables
+      -e, --exclude <vendors> exclude 'moz', 'ms' and / or 'o'
+      -w, --watch             rerun command if an input file changes
